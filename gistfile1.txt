@@ -1,4 +1,52 @@
+Update-ExecutionPolicy Unrestricted
 Install-WindowsUpdate
+
+#Windows customisations
 Set-StartScreenOptions -EnableBootToDesktop -EnableDesktopBackgroundOnStart -EnableShowStartOnActiveScreen -EnableShowAppsViewOnStartScreen -EnableSearchEverywhereInAppsView -EnableListDesktopAppsFirst
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtension
-Update-ExecutionPolicy Unrestricted
+
+#HyperV
+cinst Microsoft-Hyper-V-All -source windowsFeatures
+
+#Chocolatey packages
+cinst googlechrome
+cinst atom
+cinst vlc
+cinst putty
+cinst skype
+cinst sumatrapdf
+cinst googledrive
+cinst vagrant
+cinst checksum
+cinst filezilla
+cinst winrar
+cinst dropbox
+cinst curl
+cinst nuget.commandline
+cinst windirstat
+cinst winmerge
+cinst steam
+cinst nugetpackageexplorer
+cinst linqpad
+cinst windowsazurepowershell
+
+#git
+cinst git
+cinst poshgit
+cinst tortoisegit
+cinst sourcetree
+cinst gittfs
+cinst git-credential-winstore
+
+#debugging
+cinst fiddler
+cinst dotpeek
+cinst ilspy
+
+#runtimes
+cinst nodejs
+cisnt ruby
+cinst python
+cinst easy.install
+cinst pip
+cinst golang
