@@ -10,25 +10,34 @@ cinst Microsoft-Hyper-V-All -source windowsFeatures
 
 #Chocolatey packages
 cinst googlechrome
-cinst atom
 cinst vlc
 cinst putty
 cinst skype
 cinst sumatrapdf
 cinst googledrive
-cinst vagrant
+cinst curl
 cinst checksum
-cinst filezilla
 cinst winrar
 cinst dropbox
-cinst curl
-cinst nuget.commandline
 cinst windirstat
-cinst winmerge
 cinst steam
+cinst openvpn
+cinst vmwarevsphereclient
+cinst mumble
+cinst cyberduck
+cinst spideroak
+cinst f.lux
+cisnt spotify
+
+#devtools
+cinst atom
+cinst vagrant
+cinst nuget.commandline
+cinst winmerge
+cinst windowsazurepowershell
 cinst nugetpackageexplorer
 cinst linqpad
-cinst windowsazurepowershell
+cinst hipchat
 
 #git
 cinst git
@@ -37,6 +46,7 @@ cinst tortoisegit
 cinst sourcetree
 cinst gittfs
 cinst git-credential-winstore
+#cinst smartgit
 
 #debugging
 cinst fiddler
