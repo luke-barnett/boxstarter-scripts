@@ -55,7 +55,7 @@ cinst mumble
 cinst cyberduck
 cinst spideroak
 cinst f.lux
-cisnt spotify
+cinst spotify
 cinst microsip
 
 #devtools
@@ -84,7 +84,7 @@ cinst ilspy
 
 #runtimes
 cinst nodejs
-cisnt ruby
+cinst ruby
 cinst python
 cinst easy.install
 cinst pip
