@@ -3,6 +3,8 @@ $Boxstarter.RebookOk=$true #allow reboots
 $Boxstarter.NoPassword=$false #we have a password
 $Boxstarter.AutoLogin=$true #save my password and use it to login after reboots
 
+[Environment]::SetEnvironmentVariable('BoxStarterScriptsRoot', 'https://gist.githubusercontent.com/luke-barnett/ea9057cfcad3a36be7a4/raw/', 'User')
+
 #living on the edge
 Update-ExecutionPolicy Unrestricted
 
@@ -26,9 +28,9 @@ if (Test-PendingReboot) { Invoke-Reboot }
 cinst Microsoft-Hyper-V-All -source windowsFeatures
 if (Test-PendingReboot) { Invoke-Reboot }
 
-iex ((new-object net.webclient).DownloadString('https://gist.githubusercontent.com/luke-barnett/ea9057cfcad3a36be7a4/raw/essentials.ps1'))
-iex ((new-object net.webclient).DownloadString('https://gist.githubusercontent.com/luke-barnett/ea9057cfcad3a36be7a4/raw/utilities.ps1'))
-iex ((new-object net.webclient).DownloadString('https://gist.githubusercontent.com/luke-barnett/ea9057cfcad3a36be7a4/raw/personal-utilities.ps1'))
-iex ((new-object net.webclient).DownloadString('https://gist.githubusercontent.com/luke-barnett/ea9057cfcad3a36be7a4/raw/visualstudio.ps1'))
-iex ((new-object net.webclient).DownloadString('https://gist.githubusercontent.com/luke-barnett/ea9057cfcad3a36be7a4/raw/dev-tools.ps1'))
-iex ((new-object net.webclient).DownloadString('https://gist.githubusercontent.com/luke-barnett/ea9057cfcad3a36be7a4/raw/git-tools.ps1'))
+iex ((new-object net.webclient).DownloadString($env:BoxStarterScriptsRoot + 'essentials.ps1'))
+iex ((new-object net.webclient).DownloadString($env:BoxStarterScriptsRoot + 'utilities.ps1'))
+iex ((new-object net.webclient).DownloadString($env:BoxStarterScriptsRoot + 'personal-utilities.ps1'))
+iex ((new-object net.webclient).DownloadString($env:BoxStarterScriptsRoot + 'visualstudio.ps1'))
+iex ((new-object net.webclient).DownloadString($env:BoxStarterScriptsRoot + 'dev-tools.ps1'))
+iex ((new-object net.webclient).DownloadString($env:BoxStarterScriptsRoot + 'git-tools.ps1'))
