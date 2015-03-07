@@ -1,1 +1,1 @@
-http://boxstarter.org/package/nr/url?https://gist.githubusercontent.com/luke-barnett/ea9057cfcad3a36be7a4/raw/f8bc15e351ec85f04c68c889826c8149195f080f/boxstarter.ps1
+http://boxstarter.org/package/nr/url?https://gist.githubusercontent.com/luke-barnett/ea9057cfcad3a36be7a4/raw/a60385d9463ee16a3aff51cfc5080799c24f1642/boxstarter.ps1
