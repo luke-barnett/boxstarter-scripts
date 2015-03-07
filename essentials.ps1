@@ -1,7 +1,7 @@
 if($env:AtomProfileRepo -eq $null)
 {
   write-output 'Setting atom profile to bitbuckit.org/Technicolour/atom-profile'
-  $env:AtomProfileRepo = https://Technicolour@bitbucket.org/Technicolour/atom-profile.git
+  $env:AtomProfileRepo = 'https://Technicolour@bitbucket.org/Technicolour/atom-profile.git'
 }
 
 write-output 'Installing essentials'
