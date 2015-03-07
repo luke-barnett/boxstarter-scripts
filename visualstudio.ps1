@@ -3,7 +3,7 @@ write-output 'Visual Studio 2013 Premium'
 
 if($env:BoxStarterScriptsRoot -eq $null)
 {
-  [Environment]::SetEnvironmentVariable('BoxStarterScriptsRoot', 'https://gist.githubusercontent.com/luke-barnett/ea9057cfcad3a36be7a4/raw/', 'User')
+  [Environment]::SetEnvironmentVariable('BoxStarterScriptsRoot', 'https://raw.githubusercontent.com/luke-barnett/boxstarter-scripts/master/', 'User')
 }
 
 iex ((new-object net.webclient).DownloadString($env:BoxStarterScriptsRoot + 'visualstudio-extensions.ps1'))

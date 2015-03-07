@@ -6,7 +6,7 @@ if($env:AtomProfileRepo -eq $null)
 
 if($env:BoxStarterScriptsRoot -eq $null)
 {
-  [Environment]::SetEnvironmentVariable('BoxStarterScriptsRoot', 'https://gist.githubusercontent.com/luke-barnett/ea9057cfcad3a36be7a4/raw/', 'User')
+  [Environment]::SetEnvironmentVariable('BoxStarterScriptsRoot', 'https://raw.githubusercontent.com/luke-barnett/boxstarter-scripts/master/', 'User')
 }
 
 write-output 'Installing essentials'

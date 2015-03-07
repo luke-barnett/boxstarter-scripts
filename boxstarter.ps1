@@ -3,7 +3,7 @@ $Boxstarter.RebookOk=$true #allow reboots
 $Boxstarter.NoPassword=$false #we have a password
 $Boxstarter.AutoLogin=$true #save my password and use it to login after reboots
 
-[Environment]::SetEnvironmentVariable('BoxStarterScriptsRoot', 'https://gist.githubusercontent.com/luke-barnett/ea9057cfcad3a36be7a4/raw/', 'User')
+[Environment]::SetEnvironmentVariable('BoxStarterScriptsRoot', 'https://raw.githubusercontent.com/luke-barnett/boxstarter-scripts/master/', 'User')
 
 #living on the edge
 Update-ExecutionPolicy Unrestricted
