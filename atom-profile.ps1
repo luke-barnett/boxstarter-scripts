@@ -3,6 +3,9 @@ if($env:AtomProfileRepo -eq $null)
   [Environment]::SetEnvironmentVariable('AtomProfileRepo', 'https://Technicolour@bitbucket.org/Technicolour/atom-profile.git', 'User')
 }
 
+write-output 'Ensuring atom is installed'
+cinst atom
+
 write-output 'Getting atom profile'
 
 $atomProfileDirectory = $env:homepath + '\.atom'
