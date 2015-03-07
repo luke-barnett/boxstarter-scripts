@@ -52,7 +52,7 @@ function Get-FileEncoding($Path) {
 $profileLine = @"
 #powershell-scipts
 `$env:PowerShellModules = 'C:\code\powershell-scripts\'
-Get-ChildItem (`$env:PowerShellModules + "*.psm1") | ForEach-Object {Import-Module $_.FullName -DisableNameChecking }
+Get-ChildItem (`$env:PowerShellModules + "*.psm1") | ForEach-Object {Import-Module `$_.FullName -DisableNameChecking }
 "@
 
 if(select-string -Path $profile -Pattern 'powershell-scripts' -Quiet -SimpleMatch) {
