@@ -56,6 +56,7 @@ cinst cyberduck
 cinst spideroak
 cinst f.lux
 cisnt spotify
+cinst microsip
 
 #devtools
 cinst atom
