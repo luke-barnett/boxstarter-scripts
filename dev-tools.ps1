@@ -3,7 +3,7 @@ cinst googlechrome
 cinst firefox
 cinst opera
 cinst ie11
-cisnt phantomjs
+cinst phantomjs
 
 write-output 'installing dev-tools'
 cinst vagrant
