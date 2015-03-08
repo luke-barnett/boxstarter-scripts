@@ -5,7 +5,13 @@ if($env:PowerShellScriptsRepo -eq $null)
 
 write-output 'Getting powershell scripts'
 
-$scriptsDirectory = 'C:\code\powershell-scripts'
+$codeDirectory = 'C:\code'
+$scriptsDirectory = '$codeDirectory\powershell-scripts'
+
+if(test-path $codeDirectory)
+{
+  New-Item -ItemType directory -Path $codeDirectory
+}
 
 if(test-path $scriptsDirectory\.git)
 {
