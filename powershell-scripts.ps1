@@ -1,6 +1,6 @@
 if($env:PowerShellScriptsRepo -eq $null)
 {
-  [Environment]::SetEnvironmentVariable('PowerShellScriptsRepo', 'git@github.com:luke-barnett/powershell-scripts.git', 'User')
+  [Environment]::SetEnvironmentVariable('PowerShellScriptsRepo', 'https://github.com/luke-barnett/powershell-scripts', 'User')
 }
 
 write-output 'Getting powershell scripts'
