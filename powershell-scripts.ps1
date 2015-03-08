@@ -8,7 +8,7 @@ write-output 'Getting powershell scripts'
 $codeDirectory = 'C:\code'
 $scriptsDirectory = $codeDirectory + '\powershell-scripts'
 
-if(-not (test-path $codeDirectory))
+if(!(test-path $codeDirectory))
 {
   New-Item -ItemType directory -Path $codeDirectory
 }
