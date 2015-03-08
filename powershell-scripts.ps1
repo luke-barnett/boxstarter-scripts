@@ -6,9 +6,9 @@ if($env:PowerShellScriptsRepo -eq $null)
 write-output 'Getting powershell scripts'
 
 $codeDirectory = 'C:\code'
-$scriptsDirectory = '$codeDirectory\powershell-scripts'
+$scriptsDirectory = $codeDirectory + '\powershell-scripts'
 
-if(test-path $codeDirectory)
+if(-not test-path $codeDirectory)
 {
   New-Item -ItemType directory -Path $codeDirectory
 }
