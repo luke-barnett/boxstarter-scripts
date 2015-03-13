@@ -1,6 +1,6 @@
 if($env:AtomProfileRepo -eq $null)
 {
-  [Environment]::SetEnvironmentVariable('AtomProfileRepo', 'https://Technicolour@bitbucket.org/Technicolour/atom-profile.git', 'User')
+  [Environment]::SetEnvironmentVariable('AtomProfileRepo', 'https://luke-barnett@bitbucket.org/luke-barnett/atom-profile.git', 'User')
 }
 
 write-output 'Ensuring atom is installed'
