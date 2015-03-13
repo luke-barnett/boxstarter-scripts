@@ -6,6 +6,9 @@ if($env:AtomProfileRepo -eq $null)
 write-output 'Ensuring atom is installed'
 cinst atom
 
+write-ouput 'Ensuring node is installed'
+cinst nodejs
+
 write-output 'Getting atom profile'
 
 $atomProfileDirectory = $env:homepath + '\.atom'
@@ -19,7 +22,6 @@ if(test-path $atomProfileDirectory\.git)
   git clean -xdf
   git fetch origin
   git reset --hard origin/master
-  cd $cwd
 }
 else
 {
@@ -32,3 +34,12 @@ else
   write-output 'Cloning atom profile'
   git clone $env:AtomProfileRepo $atomProfileDirectory
 }
+
+write-output 'loading node modules for packages'
+
+get-childitem ($atomProfileDirectory + '\packages') | where {$_.Attributes -eq 'Directory'} | foreach-object {
+  cd $_.FullName
+  npm install
+}
+
+cd $cwd
