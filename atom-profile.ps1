@@ -6,7 +6,7 @@ if($env:AtomProfileRepo -eq $null)
 write-output 'Ensuring atom is installed'
 cinst atom
 
-write-ouput 'Ensuring node is installed'
+write-output 'Ensuring node is installed'
 cinst nodejs
 
 write-output 'Getting atom profile'
