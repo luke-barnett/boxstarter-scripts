@@ -22,6 +22,7 @@ cinst ilspy
 write-output 'installing runtimes'
 cinst nodejs
 cinst ruby
+cinst ruby2.devkit
 cinst python
 cinst easy.install
 cinst pip
