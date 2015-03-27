@@ -1,5 +1,6 @@
 write-output 'Visual Studio 2013 Premium'
-#cinst visualstudio2013premium
+cinst visualstudio2013premium
+cinst vs2013.4
 
 if($env:BoxStarterScriptsRoot -eq $null)
 {
