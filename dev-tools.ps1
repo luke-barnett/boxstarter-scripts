@@ -12,18 +12,13 @@ cinst winmerge
 cinst windowsazurepowershell
 cinst nugetpackageexplorer
 cinst linqpad
-cinst hipchat
 
 write-output 'debugging tools'
 cinst fiddler
-cinst dotpeek
 cinst ilspy
 
 write-output 'installing runtimes'
 cinst nodejs
 cinst ruby
 cinst ruby2.devkit
-cinst python
-cinst easy.install
-cinst pip
 cinst golang

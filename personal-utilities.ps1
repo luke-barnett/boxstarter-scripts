@@ -1,9 +1,0 @@
-write-output 'personal-utilities'
-cinst openvpn
-cinst vmwarevsphereclient
-cinst mumble
-cinst microsip
-cinst spideroak
-cinst googledrive
-cinst steam
-cinst f.lux
