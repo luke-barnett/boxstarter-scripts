@@ -1,25 +1,25 @@
 write-output 'installing more browsers for testing'
-cinst googlechrome
-cinst firefox
-cinst opera
-cinst ie11
-cinst phantomjs
+cinst -y googlechrome
+cinst -y firefox
+cinst -y opera
+cinst -y ie11
+cinst -y phantomjs
 
 write-output 'installing dev-tools'
-cinst sublimetext3
-cinst vagrant
-cinst nuget.commandline
-cinst winmerge
-cinst windowsazurepowershell
-cinst nugetpackageexplorer
-cinst linqpad
+cinst -y sublimetext3
+cinst -y vagrant
+cinst -y nuget.commandline
+cinst -y winmerge
+cinst -y windowsazurepowershell
+cinst -y nugetpackageexplorer
+cinst -y linqpad
 
 write-output 'debugging tools'
-cinst fiddler
-cinst ilspy
+cinst -y fiddler
+cinst -y ilspy
 
 write-output 'installing runtimes'
-cinst nodejs
-cinst ruby
-cinst ruby2.devkit
-cinst golang
+cinst -y nodejs
+cinst -y ruby
+cinst -y ruby2.devkit
+cinst -y golang

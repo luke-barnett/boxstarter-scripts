@@ -21,11 +21,11 @@ Install-WindowsUpdate -AcceptEula
 if (Test-PendingReboot) { Invoke-Reboot }
 
 #.NET  3.5 reboot if we need to
-cinst DotNet3.5
+cinst -y DotNet3.5
 if (Test-PendingReboot) { Invoke-Reboot }
 
 #HyperV reboot if we need to
-cinst Microsoft-Hyper-V-All -source windowsFeatures
+cinst -y Microsoft-Hyper-V-All -source windowsFeatures
 if (Test-PendingReboot) { Invoke-Reboot }
 
 iex ((new-object net.webclient).DownloadString($env:BoxStarterScriptsRoot + 'essentials.ps1'))

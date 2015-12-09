@@ -1,8 +1,8 @@
 write-output 'installing git-tools'
-cinst git
-cinst gittfs
-cinst git-credential-winstore
-cinst poshgit
-cinst tortoisegit
-cinst sourcetree
-cinst github
+cinst -y git
+cinst -y gittfs
+cinst -y git-credential-winstore
+cinst -y poshgit
+cinst -y tortoisegit
+cinst -y sourcetree
+cinst -y github

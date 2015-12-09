@@ -4,13 +4,13 @@ if($env:BoxStarterScriptsRoot -eq $null)
 }
 
 write-output 'Installing essentials'
-cinst putty
+cinst -y putty
 [Environment]::SetEnvironmentVariable('GIT_SSH', 'plink.exe', 'Machine')
-cinst git
-cinst git-credential-winstore
-cinst atom
+cinst -y git
+cinst -y git-credential-winstore
+cinst -y atom
 iex ((new-object net.webclient).DownloadString($env:BoxStarterScriptsRoot + 'atom-profile.ps1'))
 iex ((new-object net.webclient).DownloadString($env:BoxStarterScriptsRoot + 'powershell-scripts.ps1'))
-cinst googlechrome
-cinst vlc
-cinst spotify
+cinst -y googlechrome
+cinst -y vlc
+cinst -y spotify

@@ -1,9 +1,9 @@
 write-output 'installing utilities'
-cinst skype
-cinst sumatrapdf
-cinst curl
-cinst checksum
-cinst winrar
-cinst dropbox
-cinst windirstat
-cinst cyberduck
+cinst -y skype
+cinst -y sumatrapdf
+cinst -y curl
+cinst -y checksum
+cinst -y winrar
+cinst -y dropbox
+cinst -y windirstat
+cinst -y cyberduck
