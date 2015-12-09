@@ -9,7 +9,6 @@ cinst -y putty
 cinst -y git
 cinst -y git-credential-winstore
 cinst -y atom
-iex ((new-object net.webclient).DownloadString($env:BoxStarterScriptsRoot + 'atom-profile.ps1'))
 iex ((new-object net.webclient).DownloadString($env:BoxStarterScriptsRoot + 'powershell-scripts.ps1'))
 cinst -y googlechrome
 cinst -y vlc

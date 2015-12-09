@@ -17,7 +17,7 @@ Disable-InternetExplorerESC #servers be dammed
 if (Test-PendingReboot) { Invoke-Reboot }
 
 #install windows updates reboot if we need to
-Install-WindowsUpdate -AcceptEula
+#Install-WindowsUpdate -AcceptEula
 if (Test-PendingReboot) { Invoke-Reboot }
 
 #.NET  3.5 reboot if we need to
