@@ -6,6 +6,7 @@ cinst ie11
 cinst phantomjs
 
 write-output 'installing dev-tools'
+cinst sublimetext3
 cinst vagrant
 cinst nuget.commandline
 cinst winmerge
