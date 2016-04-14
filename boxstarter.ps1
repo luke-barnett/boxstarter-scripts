@@ -87,6 +87,7 @@ cinst -y tortoisegit
 cinst -y nodejs
 
 #Utilities
+cinst -y boxstarter
 cinst -y checksum
 cinst -y cyberduck
 cinst -y filezilla
