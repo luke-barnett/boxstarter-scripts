@@ -55,38 +55,47 @@ if (Test-PendingReboot) { Invoke-Reboot }
 cinst -y Microsoft-Hyper-V-All -source windowsFeatures
 if (Test-PendingReboot) { Invoke-Reboot }
 
-cinst -y atom
-cinst -y checksum
-cinst -y curl
-cinst -y cyberduck
-cinst -y fiddler
-cinst -y firefox
-cinst -y git
-cinst -y git-credential-winstore
-cinst -y github
-cinst -y gittfs
+#Browsers
 cinst -y googlechrome
+cinst -y firefox
 cinst -y ie11
+
+#Text editors
+cinst -y atom
+cinst -y sublimetext3
+
+#Development tools
+cinst -y fiddler
 cinst -y ilspy
 cinst -y linqpad
-cinst -y nodejs
 cinst -y nuget.commandline
 cinst -y nugetpackageexplorer
-cinst -y opera
 cinst -y phantomjs
-cinst -y poshgit
-cinst -y putty
-cinst -y royalts
-cinst -y sourcetree
-cinst -y spotify
-cinst -y sublimetext3
-cinst -y sumatrapdf
-cinst -y tortoisegit
-cinst -y vagrant
-cinst -y vlc
-cinst -y windirstat
 cinst -y windowsazurepowershell
 cinst -y winmerge
+
+#git
+cinst -y git
+cinst -y git-credential-manager-for-windows
+cinst -y gitversion.portable
+cinst -y sourcetree
+cinst -y gittfs
+cinst -y poshgit
+cinst -y tortoisegit
+
+#Runtimes
+cinst -y nodejs
+
+#Utilities
+cinst -y checksum
+cinst -y cyberduck
+cinst -y filezilla
+cinst -y putty
+cinst -y royalts
+cinst -y spotify
+cinst -y sumatrapdf
+cinst -y vlc
+cinst -y windirstat
 cinst -y winrar
 
 $codeDirectory = 'C:\code'
