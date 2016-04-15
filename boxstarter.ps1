@@ -56,13 +56,10 @@ cinst -y Microsoft-Hyper-V-All -source windowsFeatures
 if (Test-PendingReboot) { Invoke-Reboot }
 
 #Browsers
-cinst -y googlechrome
-cinst -y firefox
-cinst -y ie11
+cinst -y googlechrome firefox ie11
 
 #Text editors
-cinst -y atom
-cinst -y sublimetext3
+cinst -y atom sublimetext3 visualstudiocode
 
 #Development tools
 cinst -y fiddler
@@ -75,13 +72,10 @@ cinst -y windowsazurepowershell
 cinst -y winmerge
 
 #git
-cinst -y git
-cinst -y git-credential-manager-for-windows
+cinst -y git git-credential-manager-for-windows gittfs
+cinst -y poshgit 
 cinst -y gitversion.portable
-cinst -y sourcetree
-cinst -y gittfs
-cinst -y poshgit
-cinst -y tortoisegit
+cinst -y sourcetree tortoisegit
 
 #Runtimes
 cinst -y nodejs
