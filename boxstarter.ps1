@@ -62,7 +62,7 @@ cinst -y googlechrome firefox ie11
 cinst -y atom sublimetext3 visualstudiocode
 
 #Development tools
-cinst -y fiddler
+cinst -y fiddler4
 cinst -y ilspy
 cinst -y linqpad
 cinst -y nuget.commandline
