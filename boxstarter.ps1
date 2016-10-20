@@ -59,7 +59,7 @@ if (Test-PendingReboot) { Invoke-Reboot }
 cinst -y googlechrome firefox ie11
 
 #Text editors
-cinst -y atom sublimetext3 visualstudiocode
+cinst -y sublimetext3 visualstudiocode
 
 #Development tools
 cinst -y fiddler4
@@ -67,7 +67,6 @@ cinst -y ilspy
 cinst -y linqpad
 cinst -y nuget.commandline
 cinst -y nugetpackageexplorer
-cinst -y phantomjs
 cinst -y windowsazurepowershell
 cinst -y winmerge
 
@@ -83,15 +82,16 @@ cinst -y nodejs
 #Utilities
 cinst -y boxstarter
 cinst -y checksum
-cinst -y cyberduck
+cinst -y bind-toolsonly
+cinst -y azcopy
 cinst -y filezilla
 cinst -y putty
 cinst -y royalts
 cinst -y spotify
-cinst -y sumatrapdf
 cinst -y vlc
 cinst -y windirstat
 cinst -y winrar
+cinst -y yarn
 
 $codeDirectory = 'C:\code'
 $scriptsDirectory = $codeDirectory + '\powershell-scripts'
