@@ -47,6 +47,10 @@ if (Test-PendingReboot) { Invoke-Reboot }
 #Install-WindowsUpdate -AcceptEula disable the update process
 if (Test-PendingReboot) { Invoke-Reboot }
 
+#should really remove this at some point
+choco feature enable -n=allowEmptyChecksums
+choco feature enable -n=allowEmptyChecksumsSecure
+
 #.NET  3.5 reboot if we need to
 cinst -y DotNet3.5
 if (Test-PendingReboot) { Invoke-Reboot }
@@ -92,6 +96,10 @@ cinst -y vlc
 cinst -y windirstat
 cinst -y winrar
 cinst -y yarn
+
+#should really remove this at some point
+choco feature disable -n=allowEmptyChecksums
+choco feature disable -n=allowEmptyChecksumsSecure
 
 $codeDirectory = 'C:\code'
 $scriptsDirectory = $codeDirectory + '\powershell-scripts'
