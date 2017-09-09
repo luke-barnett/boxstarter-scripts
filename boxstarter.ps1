@@ -46,7 +46,7 @@ Install-WindowsUpdate -AcceptEula -SuppressReboots -GetUpdatesFromMS
 if (Test-PendingReboot) { Invoke-Reboot }
 
 #.NET  3.5 reboot if we need to
-cinst -y DotNet3.5
+cinst -y DotNet3.5 powershell
 if (Test-PendingReboot) { Invoke-Reboot }
 
 #HyperV reboot if we need to
