@@ -60,7 +60,7 @@ cinst -y googlechrome firefox
 cinst -y sublimetext3 visualstudiocode
 
 #Development tools
-cinst -y fiddler4 ilspy linqpad nuget.commandline nugetpackageexplorer windowsazurepowershell sql-server-management-studio
+cinst -y fiddler4 ilspy linqpad nuget.commandline nugetpackageexplorer windowsazurepowershell sql-server-management-studio docker-for-windows
 
 #git
 cinst -y git git-credential-manager-for-windows poshgit
@@ -78,7 +78,8 @@ cinst -y nodejs yarn
 
 #Utilities
 cinst -y boxstarter checksum bind-toolsonly azcopy filezilla putty
-cinst -y royalts spotify vlc windirstat 7zip
+cinst -y royalts spotify vlc windirstat 7zip grammarly
+cinst -y resilio-sync-home spideroakone qbittorrent acestream
 
 Write-Output 'Install common npm global packages'
 npm install -g eslint grunt-cli gulp-cli http-server iisexpress-proxy jshint rimraf npm-windows-upgrade
