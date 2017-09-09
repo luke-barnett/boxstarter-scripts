@@ -36,15 +36,13 @@ if($env:PowerShellScriptsRepo -eq $null)
 }
 
 #Windows customisations
-Set-StartScreenOptions -EnableBootToDesktop -EnableDesktopBackgroundOnStart -EnableShowStartOnActiveScreen -EnableShowAppsViewOnStartScreen -EnableSearchEverywhereInAppsView -EnableListDesktopAppsFirst
-Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtension
+Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtension -EnableShowFullPathInTitleBar
 Disable-InternetExplorerESC #servers be dammed
+Disable-BingSearch
+Disable-UAC
+Install-WindowsUpdate -AcceptEula -SuppressReboots -GetUpdatesFromMS
 
 #reboot if needed
-if (Test-PendingReboot) { Invoke-Reboot }
-
-#install windows updates reboot if we need to
-#Install-WindowsUpdate -AcceptEula disable the update process
 if (Test-PendingReboot) { Invoke-Reboot }
 
 #.NET  3.5 reboot if we need to
@@ -56,42 +54,38 @@ cinst -y Microsoft-Hyper-V-All -source windowsFeatures
 if (Test-PendingReboot) { Invoke-Reboot }
 
 #Browsers
-cinst -y googlechrome firefox ie11
+cinst -y googlechrome firefox
 
 #Text editors
 cinst -y sublimetext3 visualstudiocode
 
 #Development tools
-cinst -y fiddler4
-cinst -y ilspy
-cinst -y linqpad
-cinst -y nuget.commandline
-cinst -y nugetpackageexplorer
-cinst -y windowsazurepowershell
-cinst -y winmerge
+cinst -y fiddler4 ilspy linqpad nuget.commandline nugetpackageexplorer windowsazurepowershell sql-server-management-studio
 
 #git
-cinst -y git git-credential-manager-for-windows gittfs
-cinst -y poshgit 
+cinst -y git git-credential-manager-for-windows poshgit
 cinst -y gitversion.portable
 cinst -y sourcetree tortoisegit
 
+#visual studio 2017
+cinst -y visualstudio2017professional
+cinst -y visualstudio2017-workload-azure visualstudio2017-workload-data visualstudio2017-workload-manageddesktop visualstudio2017-workload-netcoretools
+cinst -y visualstudio2017-workload-netcrossplat visualstudio2017-workload-netweb visualstudio2017-workload-node visualstudio2017-workload-office visualstudio2017-workload-universal
+cinst -y visualstudio2017-workload-webcrossplat visualstudio2017-workload-visualstudioextension
+
 #Runtimes
-cinst -y nodejs
+cinst -y nodejs yarn
 
 #Utilities
-cinst -y boxstarter
-cinst -y checksum
-cinst -y bind-toolsonly
-cinst -y azcopy
-cinst -y filezilla
-cinst -y putty
-cinst -y royalts
-cinst -y spotify
-cinst -y vlc
-cinst -y windirstat
-cinst -y winrar
-cinst -y yarn
+cinst -y boxstarter checksum bind-toolsonly azcopy filezilla putty
+cinst -y royalts spotify vlc windirstat 7zip
+
+Write-Output 'Install common npm global packages'
+npm install -g eslint grunt-cli gulp-cli http-server iisexpress-proxy jshint rimraf npm-windows-upgrade
+
+Write-Output 'Pinning chocolatey packages'
+choco pin add -n=googlechrome
+choco pin add -n=visualstudiocode
 
 $codeDirectory = 'C:\code'
 $scriptsDirectory = $codeDirectory + '\powershell-scripts'
